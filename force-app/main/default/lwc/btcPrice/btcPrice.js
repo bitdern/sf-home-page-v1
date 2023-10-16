@@ -1,5 +1,5 @@
 import { LightningElement } from "lwc";
-export default class bitcoinComponent extends LightningElement {
+export default class btcPrice extends LightningElement {
   BTCVALUE;
   lastUpdatedDateTime;
   loading = true;
