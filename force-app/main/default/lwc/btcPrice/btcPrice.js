@@ -3,8 +3,8 @@ export default class btcPrice extends LightningElement {
   BTCVALUE;
   lastUpdatedDateTime;
   loading = true;
-  updateButton() {
-    fetch("https://api.coindesk.com/v1/bpi/currentprice.json")
+  async updateButton() {
+    await fetch("https://api.coindesk.com/v1/bpi/currentprice.json")
       .then((response) => response.json())
       .then((data) => {
         this.BTCVALUE = data.bpi.USD.rate_float; //display price
